@@ -25,7 +25,7 @@ fat = readr::read_csv("data/staging/ptccr_22.csv") %>%
   dplyr::left_join(county_pop, by = "County") %>%
   dplyr::mutate(
     `Fatality Rate` = (`Fatalities (2022)` / `Population (2020)`) * 100000,
-    `Cyclist/Pedstrian Fatality Rate` = (`Cyclist/Pedestrian Fatalities (2022)` / `Population (2020)`) * 100000
+    `Cyclist/Pedestrian Fatality Rate` = (`Cyclist/Pedestrian Fatalities (2022)` / `Population (2020)`) * 100000
   ) %>%
   dplyr::arrange(dplyr::desc(`Fatality Rate`))
 
