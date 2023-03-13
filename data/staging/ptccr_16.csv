@@ -1,0 +1,23 @@
+County,Driver,Passenger,Pedalcyclist,Pedestrian,Fatalities,Crashes
+Atlantic,19,4,4,13,40,39
+Bergen,16,5,0,14,35,32
+Burlington,31,5,1,13,50,49
+Camden,19,5,1,14,39,38
+Cape May,7,3,0,2,12,11
+Cumberland,17,7,3,5,32,29
+Essex,17,6,1,22,46,42
+Gloucester,15,3,1,7,26,26
+Hudson,8,3,1,12,24,22
+Hunterdon,5,5,0,1,11,10
+Mercer,10,1,1,8,20,20
+Middlesex,30,7,0,10,47,43
+Monmouth,33,7,0,10,50,47
+Morris,11,6,0,4,21,20
+Ocean,25,7,1,8,41,39
+Passaic,15,1,0,6,22,22
+Salem,12,2,0,1,15,14
+Somerset,11,1,1,6,19,18
+Sussex,8,4,0,0,12,12
+Union,12,4,0,9,25,24
+Warren,9,3,2,1,15,13
+Total,330,89,17,166,602,570

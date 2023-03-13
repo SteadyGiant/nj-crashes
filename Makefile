@@ -6,7 +6,7 @@ R := Rscript --vanilla
 
 .PHONY: all
 ##     all                                     Build all targets.
-all: data/staging/ptccr_22.csv data/final/fatalities_2022.csv
+all: raw data/final/fatalities_2014-2022.csv
 
 .PHONY: clean
 ##     clean                                   Delete all built targets.
@@ -18,12 +18,13 @@ clean:
 help: Makefile
 	@sed -n 's/^##//p' $<
 
-## Targets:
-
-##     data/staging/ptccr_22.csv               Extract raw data table from PDF report.
-data/staging/ptccr_22.csv: extract.r data/raw/ptccr_22.pdf
+.PHONY: raw_data
+##     raw_data                                 Extract raw data tables from PDF reports.
+raw_data: extract.r
 	$(R) $<
 
-##     data/final/fatalities_2022.csv          Final dataset for analysis.
-data/final/fatalities_2022.csv: main.r data/staging/ptccr_22.csv
+## Targets:
+
+##     data/final/fatalities_2014-2022          Final dataset for analysis.
+data/final/fatalities_2014-2022.csv: main.r data/staging/*.csv
 	$(R) $<
