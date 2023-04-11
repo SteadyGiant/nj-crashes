@@ -5,7 +5,7 @@ library(readr)
 # remotes::install_github("ropensci/tabulizer")
 library(tabulizer)
 
-files = list.files("data/raw", pattern = "\\.pdf$", full.names = TRUE)
+files = list.files("data/raw", pattern = "^ptccr", full.names = TRUE)
 
 dfs = files %>%
   purrr::map(tabulizer::extract_tables, output = "data.frame") %>%
