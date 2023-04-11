@@ -45,4 +45,4 @@ county_pop = tidycensus::get_decennial(
   dplyr::arrange(dplyr::desc(`Fatalities per 100k pop`))
 
 readr::write_csv(fat, "data/final/fatalities_2014-2022.csv")
-readr::write_csv(county_pop, "data/final/fatality_rates_2021.csv")
+readr::write_csv(county_pop, "data/final/fatality_rates.csv")
