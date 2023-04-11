@@ -1,8 +1,8 @@
-library(magrittr)
+library(dplyr)
 library(purrr)
 library(readr)
-# install.packages("rJava")
-# remotes::install_github(c("ropensci/tabulizerjars", "ropensci/tabulizer"))
+# install.packages(c("remotes", "rJava"))
+# remotes::install_github("ropensci/tabulizer")
 library(tabulizer)
 
 files = list.files("data/raw", pattern = "\\.pdf$", full.names = TRUE)

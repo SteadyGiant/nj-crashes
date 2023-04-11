@@ -19,12 +19,12 @@ help: Makefile
 	@sed -n 's/^##//p' $<
 
 .PHONY: raw_data
-##     raw_data                                 Extract raw data tables from PDF reports.
+##     raw_data                                Extract raw data tables from PDF reports.
 raw_data: extract.r
 	$(R) $<
 
-## Targets:
-
-##     data/final/fatalities_2014-2022          Final dataset for analysis.
-data/final/fatalities_2014-2022.csv: main.r data/staging/*.csv
+.PHONY: final_data
+##    final_data                               Build final data tables for analysis.
+final_data: main.r
 	$(R) $<
+
